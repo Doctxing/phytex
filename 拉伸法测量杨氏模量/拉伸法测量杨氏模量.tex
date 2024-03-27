@@ -1,0 +1,258 @@
+\documentclass{ctexart}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage{tikz}
+\usepackage{array}
+\xeCJKsetup{CJKmath=true} 
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand \thesubsection {\arabic{subsection}}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\geometry{
+    a4paper,
+    left=3.18cm,
+    right=3.18cm,
+    top=3.04cm,
+    bottom=3.04cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
+\fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
+\fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
+\fancyfoot[R]{\thepage} % 将页数放在右下角
+
+
+\setlength\headwidth{\textwidth}
+
+\begin{document}
+
+\noindent
+\begin{center}
+\textbf{
+\begin{tabular}{p{2.4cm}p{2.4cm}p{4cm}p{4cm}}
+    班级 \hrulefill & 学号 \hrulefill & 姓名 \hrulefill & 教师签字 \hrulefill \\
+\end{tabular}
+\begin{tabular}{p{6cm}p{3.6cm}p{3.6cm}}
+    实验日期 \hrulefill & 预习成绩 \hrulefill & 总成绩 \hrulefill
+\end{tabular}
+{\noindent}	 \rule[-10pt]{\textwidth}{0.7pt}
+}\end{center}
+
+\begin{center}
+    \Large \textbf{实验内容 \underline{拉伸法测量杨氏模量}}
+\end{center}
+
+\section{实验目的}
+
+~\\
+~\\
+
+\section{实验预习}
+
+\subsection{杨氏模量的物理意义是什么?国标单位是什么?}
+
+~\\
+~\\
+~\\
+
+\subsection{光杠杆法的原理是什么，是如何实现微小量放大的?（画出测量原理光路图）。}
+
+~\\
+~\\
+~\\
+~\\
+~\\
+~\\
+~\\
+~\\
+~\\
+~\\
+
+\subsection{本实验需要测量哪些物理量来间接得到杨氏模量?}
+
+\newpage
+\section{实验现象及数据记录}
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{一次性数据}
+    \label{tab:once_data}
+    \begin{tabular}{|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|}
+        \hline
+        $L (mm)$&$H (mm)$&$D (mm)$ \\
+        \hline
+         & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{金属丝直径测量数据	螺旋测微器零差$d_0=\ \ \ \ \ \ \ \ \ mm$}
+    \label{tab:D}
+    \begin{tabular}{|m{2cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|}
+        \hline
+        序号$i$ & 1 & 2 & 3 & 4 & 5 & 6 & 平均值 \\
+        \hline
+        直径视值$d_{视i} \ $(mm)&  & & & & & &  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{加减力时标尺刻度与对应拉力数据}
+    \label{tab:datas}
+    \begin{tabular}{|m{3.5cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|m{0.6cm}<{\centering}|}
+        \hline
+        序号$i$&1&2&3&4&5&6&7&8&9&10 \\
+        \hline
+        拉力视值$f_i$ \ \ \ \ \ \ \ \ (kg) & & & & & & & & & & \\
+        \hline
+        加力时标尺刻度$x_i^+$ (mm) & & & & & & & & & & \\
+        \hline
+        减力时标尺刻度$x_i^-$ (mm) & & & & & & & & & & \\
+        \hline
+        平均标尺刻度$xi=\frac{(x_i^+ + x_i^−)}{2}$ (mm) & & & & & & & & & & \\
+        \hline
+        标尺刻度改变量$\Delta x_i = x_{i+5}−x_i$ (mm) & & & & & & \multicolumn{5}{m{0.6cm}<{\centering}|}{} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=100pt] at (current page.south east) {
+        \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+        \setlength{\tabcolsep}{18pt}    
+    \begin{tabular}{|c|c|}
+        \hline
+        \LARGE  教师 & \LARGE  姓名 \\
+        \hline
+        \LARGE \kaishu 签字 &  \\
+        \hline
+        \end{tabular}
+    };
+\end{tikzpicture}
+
+\newpage
+
+\section{数据处理}
+
+（要有详细的计算过程，推导不确定度的表达式，计算杨氏模量及其不确定度，给出完整的测量结果表达形式）
+
+金属丝的平均值：
+
+$$ \overline{d} = \overline{d_视} - d_0 =  0.546 + 0.055 = 0.601 mm $$
+
+根据实验原始数据，拉力视值每增加1kg，标尺刻度的改变量平均值:
+
+$$ \overline{\Delta x}_{by1} = \frac{\sum_{i=1}^{5}\Delta x_i}{5 \cdot 5} = 3.588 mm $$
+
+所以金属丝的平均伸长量:
+
+$$ \overline{\Delta L} = \frac{D}{2H} \overline{\Delta x}_{by1} = \frac{44.22 mm}{2 \times 684.0 mm}\times 3.588 mm = 0.1160 mm $$
+
+根据杨氏模量的表达式:
+
+$$ E = \frac{4 \Delta F}{\pi d^2} \cdot \frac{L}{\Delta L} = \frac{4\Delta m g}{\pi d^2} \cdot \frac{L}{\Delta L}$$
+
+得杨氏模量的计算值为:
+
+$$ \overline{E} = \frac{4\times 1.00 kg \times 9.8 N/kg}{\pi \times (0.601 mm)^2} \times \frac{726.5 mm}{0.1160 mm} = 2.16354 \times 10^{11} N/m^2 $$
+
+
+~\\
+接下来计算不确定度:
+
+根据杨氏模量的表达式$E = \frac{8\Delta mgLH}{\pi Dd^2}\cdot\frac{1}{\overline{\Delta x}_{by1}}$，得到合成不确定度表达式
+
+$$ E_E = \sqrt{\frac{U_L^2}{L^2}+\frac{U_H^2}{H^2}+\frac{U_D^2}{D^2}+\frac{U_{\overline{\Delta m}}^2}{{\overline{\Delta m}}^2}+\frac{4 U_{\overline{d}}^2}{{\overline{d}}^2}+\frac{U_{\overline{\Delta x}}^2}{\overline{\Delta x}^2}} $$
+
+1. 公式中 $L, H, D, \Delta 𝑚$ 只有B类不确定度，有 $ U = \frac{\Delta_仪}{\sqrt{3}} $
+
+\begin{table}[h]
+    %\renewcommand\arraystretch{1.6}
+    \centering
+    \caption{误差限表}
+    \label{tab:delta_yi}
+    \begin{tabular}{|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|}
+        \hline
+        \textbf{\heiti 量具名称}&\textbf{\heiti 测量参数}&\textbf{\heiti 误差限} $\Delta_仪$ \\
+        \hline
+        钢卷尺&$L,H$&$0.8 mm $ \\
+        \hline
+        游标卡尺&$D$&$0.02 mm $ \\
+        \hline
+        螺旋测微器&$d$&$0.004 mm $ \\
+        \hline
+        数字拉力计&$m$&$0.005 kg $ \\
+        \hline
+        标尺&$\Delta x$&$0.5 mm$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+2. 而d（使用螺旋测微器测量）既有A类不确定度，也有B类不确定度，故有:
+
+$$ S_{\overline{d}} = \sqrt{\frac{\sum_{i=1}^{6}\left(d_视-\overline{d_视}\right)^2}{6\times(6-1)}} = 6.0553 \times 10^{-4} mm $$
+
+则计算得：
+
+$$ U_d = \sqrt{(S_{\overline{d}})^2+(\frac{\Delta_仪}{\sqrt{3}})^2} = 2.38747 \times 10^{-3} mm $$
+
+
+3. 而$\Delta x$为间接测量量，要计算其合成不确定度$U_{\Delta x}$，同样的我们有：
+
+$$ \overline{\Delta x} = \frac{\sum_{i=1}^{5}\Delta x_i}{5} = 17.49 mm $$
+
+有：
+
+$$ S_{\overline{\Delta x}} = \sqrt{\frac{\sum_{i=1}^{5}\left(\Delta x -\overline{\Delta x}\right)^2}{5\times(5-1)}} = 0.58189 $$
+
+应注意，这里$\Delta x$也是间接量，此处B类不确定度应当乘上一个系数，
+
+$$u_B = \sqrt{2} \frac{\Delta_仪}{\sqrt{3}} = 0.40825 $$
+
+合成得到：
+$$ U_{\Delta x}=\sqrt{(S_{\overline{\Delta x}})^2+(u_B)^2} = 0.71082$$
+
+
+则最终的合成不确定度有：
+
+$$ E_E = \left[ \left(\frac{0.8}{\sqrt{3} \times 726.5 }\right)^2+\left(\frac{0.8}{\sqrt{3} \times 684.0}\right)^2+\left(\frac{0.02}{\sqrt{3} \times 44.22}\right)^2+\right. $$
+$$\left.\left(\frac{0.005}{\sqrt{3} \times 1.00}\right)^2+4  \left(\frac{2.38747 \times 10^{-3}}{0.601}\right)^2+\left(\frac{0.71082}{17.49}\right)^2\right]^{\frac{1}{2}} = 4.052\% $$
+
+~
+$$U_E = \overline{E} \cdot E_E = 0.088 \times 10^{11} N/m^2 $$
+$$ E = \overline{E} \pm U_E = (2.164 \pm 0.088) \times 10^{11} N/m^2 $$
+$$P = 68.3\% $$
+\newpage
+
+\section{实验结论及误差分析}
+结论：测量得到金属丝的杨氏模量为 $(2.164±0.088)×10^{11} N/m^2 $，不确定度 $ E_E =4.052\% $，置信概率为 $68.3\% $，查询资料得到铁的杨氏模量为$2.11 \times 10^{11} N/m^2$，结果符合实际值。 
+
+从计算不确定度的步骤可以发现，所有不确定度中数值最大的是$\frac{U_{\overline{\Delta x}}^2}{\overline{\Delta x}^2}$项，因此标尺是最主要的误差来源。 
+\section{讨论问题}
+
+\subsection{材料相同，但粗细、长度不同的两根钢丝，它们的杨氏模量是否相同？}
+杨氏模量只与材料有关，所以这两根钢丝的杨氏模量相同。
+\subsection{从误差分析的角度分析为什么同是长度测量，需要采用不同的量具？}
+不同测量工具的的量程和误差大小不同。如果测量的长度较长，就必须选择量程大且误差大的量具；如果测量的长度较小，就应该选择量程小且误差小的量具。
+\subsection{实验过程中为什么加力和减力过程，施力螺母不能回旋？}
+由于实验器材的原因，如果在加力和减力过程将施力螺母回旋，则会产生回程误差，降
+低实验结果的准确性。
+\subsection{用逐差法处理数据的优点是什么？应该注意什么问题？}
+优点：可以利用到的每一组实验数据，减小误差。 
+
+注意：所测量的数据应是偶数（4, 6, 8, …）组。
+\end{document}

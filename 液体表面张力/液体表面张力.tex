@@ -1,0 +1,318 @@
+\documentclass{ctexart}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{array}
+\xeCJKsetup{CJKmath=true} 
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand \thesubsection {\arabic{subsection}}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\geometry{
+    a4paper,
+    left=3.18cm,
+    right=3.18cm,
+    top=3.04cm,
+    bottom=3.04cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
+\fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
+\fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
+\fancyfoot[R]{\thepage} % 将页数放在右下角
+
+
+\setlength\headwidth{\textwidth}
+
+\begin{document}
+
+\noindent
+\begin{center}
+\textbf{
+\begin{tabular}{p{2.4cm}p{2.4cm}p{4cm}p{4cm}}
+    班级 \hrulefill & 学号 \hrulefill & 姓名 \hrulefill & 教师签字 \hrulefill \\
+\end{tabular}
+\begin{tabular}{p{6cm}p{3.6cm}p{3.6cm}}
+    实验日期 \hrulefill & 预习成绩 \hrulefill & 总成绩 \hrulefill
+\end{tabular}
+{\noindent}	 \rule[-10pt]{\textwidth}{0.7pt}
+}\end{center}
+
+\begin{center}
+    \Large \textbf{实验内容 \underline{液体表面张力系数测量}}
+\end{center}
+
+\section{实验预习}
+\subsection{什么是表面张力? 液体表面张力系数与哪些因素有关?}
+\subsection{拉脱法测量液体表面张力的实验原理是什么？}
+
+\newpage
+\section{实验现象及原始数据记录}
+\subsection{吊环的内、外直径（单位：mm）}
+
+\begin{table}[h]
+    \renewcommand\arraystretch{1.6}
+    \centering
+    \caption{吊环的测量}
+    \label{tab:m}
+    \begin{tabular}{|m{1.8cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|}
+        \hline
+        测量次数& 1 & 2 & 3 & 4 & 5 & 平均值 \\
+        \hline
+        内径$D_i$ & & & & & & \\
+        \hline
+        外径$D_o$ & & & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+~
+
+\subsection{利用逐差法求仪器的转换系数$K$：}
+~\\
+先记录砝码盘等作为初始读数$V_0 = \rule{1.3cm}{0.4pt} mV $ ，然后每次增加一个砝码500mg，（该标准砝码符合国家标准，相对误差为0.05\%）
+~\\
+
+\begin{table}[h]
+    \renewcommand\arraystretch{1.3}
+    \centering
+    \caption{吊环的测量}
+    \label{tab:k}
+    \begin{tabular}{|m{2cm}<{\centering}|m{2cm}<{\centering}|m{2cm}<{\centering}|m{3.5cm}<{\centering}|}
+        \hline
+        砝码质量 $10^{-6} Kg $ & 增重读数 $V_1' (mV)$ & 减重读数 $V_1'' (mV)$ & $V_i = \frac{V_i{'}+V_i{''}}{2} (mV)$ \\
+        \hline
+        0.00 & & & \\
+        \hline
+        500.00 & & & \\
+        \hline
+        1000.00 & & & \\
+        \hline
+        1500.00 & & & \\
+        \hline
+        2000.00 & & & \\
+        \hline
+        2500.00 & & & \\
+        \hline
+        3000.00 & & & \\
+        \hline
+        3500.00 & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+~
+
+利用逐差法求出每 500 mg 对应的电子秤的读数 $\Delta V$ ，则 $\overline{K} = \frac{mg}{\Delta V} = \rule{1.5cm}{0.4pt} N/mV $ 
+\newpage
+\subsection{用拉脱法求拉力对应的电子秤读数：}
+
+\begin{table}[h]
+    \renewcommand\arraystretch{1.6}
+    \centering
+    \caption{室温下表面张力系数测量表}
+    \label{tab:T1}
+    \begin{tabular}{|m{1.8cm}<{\centering}|m{3cm}<{\centering}|m{2.5cm}<{\centering}|m{4cm}<{\centering}|}
+        \multicolumn{4}{c}{水温（室温）$\rule{1.5cm}{0.4pt} ^\circ C$,  电子秤初始读数$V_0 = \rule{1.5cm}{0.4pt} mV$} \\
+        \hline
+        测量次数& 拉脱时最大读数 $V_1 (mV)$ & 吊环读数 $V_2 (mV)$ & 表面张力对应读数(mV) $V_i^\ast = V_1-V_2$\\
+        \hline
+        1 & & & \\
+        \hline
+        2 & & & \\
+        \hline
+        3 & & & \\
+        \hline
+        4 & & & \\
+        \hline
+        5 & & & \\
+        \hline
+        平均值 & & & $\overline{V} = \rule{2.5cm}{0.4pt} $\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+    \renewcommand\arraystretch{1.6}
+    \centering
+    \caption{不同温度下表面张力系数测量表}
+    \label{tab:T2}
+    \begin{tabular}{|m{1.8cm}<{\centering}|m{3cm}<{\centering}|m{2.5cm}<{\centering}|m{4cm}<{\centering}|}
+        \multicolumn{4}{c}{水温（室温）$\rule{1.5cm}{0.4pt} ^\circ C$,  电子秤初始读数$V_0 = \rule{1.5cm}{0.4pt} mV$} \\
+        \hline
+        测量次数& 拉脱时最大读数 $V_1 (mV)$ & 吊环读数 $V_2 (mV)$ & 表面张力对应读数(mV) $V_i^\ast = V_1-V_2$\\
+        \hline
+        1 & & & \\
+        \hline
+        2 & & & \\
+        \hline
+        3 & & & \\
+        \hline
+        4 & & & \\
+        \hline
+        5 & & & \\
+        \hline
+        平均值 & & & $\overline{V} = \rule{2.5cm}{0.4pt} $\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=100pt] at (current page.south east) {
+        \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+        \setlength{\tabcolsep}{18pt}    
+    \begin{tabular}{|c|c|}
+        \hline
+        \LARGE  教师 & \LARGE  姓名 \\
+        \hline
+        \LARGE \kaishu 签字 &  \\
+        \hline
+        \end{tabular}
+    };
+\end{tikzpicture}
+
+\newpage
+
+\section{数据处理}
+\subsection{测量室温下水的表面张力系数，并计算不确定度}
+据实验信息可知：
+
+\begin{align*}
+    \overline{L} &= \pi \left(\overline{D_{\text{内}}} + \overline{D_{\text{外}}}\right) \\
+    \overline{\alpha} &= \frac{\overline{K} \cdot \overline{V}}{\overline{L}} \\
+    \left(\frac{\Delta \alpha}{\overline{\alpha}}\right)^2 &= \left(\frac{\Delta K}{K}\right)^2 + \left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta L}{L}\right)^2 \\
+    \alpha &= \overline{\alpha} \pm \Delta \alpha 
+\end{align*}
+
+首先计算 $500mg$ 对应的电子秤的读数，为了表示方便，记 $ \delta V_{i,i+4} = \frac{V_{i+4}-V_{i}}{4} $
+
+$$ \Delta V = \frac{\sum\limits_{i = 1}^{4} \delta V_{i,i+4} }{4} = 536.9 \mu V $$
+计算逐差法对应的不确定度，在单次对电压的测量中，误差满足正态分布规律，C取3
+$$ U_s = \frac{0.001mV}{3} $$
+
+
+可以求得$V_i$对应的不确定度以及$\delta V_{i,i+4}$对应的不确定度：
+
+\begin{align*}
+    U_{V_i} &= \sqrt{2 \times \frac{U_s^2}{2^2}} = 235.7 nV \\
+    U_{\delta V_{i,i+4}} &= \sqrt{2 \times \frac{U_{V_i}^2}{4^2}} = 83.3 nV
+\end{align*}
+
+将A类不确定度和B类不确定度合成有：
+
+$$ U_{V} = \sqrt{U_{\delta V_{i,i+4}}^2 + \frac{\sum\limits_{i=1}^{4} \left(\delta V_{i,i+4} - \Delta V\right)^2}{4 \times (4-1)}} = 110.24 nV $$
+
+然后计算转换系数：
+
+$$ \overline{K} = \frac{mg}{\Delta V} = 9.127 \times 10^{-3} N/mV $$
+
+计算转换系数的不确定度 
+
+$$ U_K = \left|U_V\frac{\partial K}{\partial \Delta V}\right| = \frac{mg U_V}{\Delta V^2} = 1.874 \times 10^{-6} N/mV $$
+接下来计算室温下的水表面张力系数。 
+
+
+首先计算表面张力对应的测量值读数：
+
+$$ \overline{V^\ast} = \frac{\sum\limits_{i=1}^{5} V_i^\ast}{5} = 1.657 mV  $$
+
+
+接下来计算单次得到表面张力对应系数的不确定度： 
+
+$$ U_{V_i^\ast} = \sqrt{2 \times \frac{U_s^2}{2^2}} = 235.7 nV$$
+
+将A类不确定度和B类不确定度合成有：
+
+$$ U_{\overline{V^\ast}} = \sqrt{U_{V_i^\ast}^2 + \frac{\sum\limits_{i=1}^{5} \left(V_i^\ast - \overline{V^\ast} \right)^2}{5 \times (5-1)}} = 2.719 \mu V $$
+接下来求吊环内外径的不确定度，
+
+先求得均值：
+
+\begin{align*}
+    \overline{D_i} &= \frac{\sum\limits_{j=1}^{5} D_{ij}}{5} = 32.78 mm \\
+    \overline{D_o} &= \frac{\sum\limits_{j=1}^{5} D_{oj}}{5} = 34.75 mm
+\end{align*}
+
+求取测量吊环内外径的不确定度，游标卡尺极限误差0.02mm，误差服从均匀分布：
+
+\begin{align*}
+    A_i = \sqrt{\frac{\sum\limits_{j=1}^{5}\left(D_{ji}-\overline{D_i}\right)^2}{5 \times (5-1)}} = 7.75 \mu m \\
+    A_o = \sqrt{\frac{\sum\limits_{j=1}^{5}\left(D_{jo}-\overline{D_o}\right)^2}{5 \times (5-1)}} = 5.00\mu m \\
+\end{align*}
+
+又有其B类不确定度$U_r = \frac{0.02}{3} mm $，有
+
+\begin{align*}
+    U_{\overline{D_i}} &= \sqrt{U_r^2 + A_i^2} = 10.22 \mu m \\
+    U_{\overline{D_o}} &= \sqrt{U_r^2 + A_o^2} = 8.33 \mu m 
+\end{align*}
+现求取表面张力系数：
+
+$$ \alpha = \frac{\overline{K} \cdot \overline{V}}{\pi\left(\overline{D_i}+\overline{D_o}\right)} = 7.13 \times 10^{-2} N/m $$
+
+应用合成不确定度计算方法化简得到：
+
+$$ E = \sqrt{\frac{U_K^2}{\overline{K}^2} + \frac{U_{\overline{V^\ast}}^2}{\overline{V^\ast}^2} + \frac{U_{\overline{D_i}}^2 + U_{\overline{D_o}}^2}{\left(\overline{D_i}+\overline{D_o}\right)^2}} = 0.2\% $$
+
+求出不确定度：
+
+$$ U = E \alpha = 0.000164 N/m $$
+$$ \alpha = (7.13 \pm 0.02) \times 10^{-2} N/m $$
+$$ P = 68.3 \% $$
+
+
+
+\subsection{从附录中查出室温下水的表面张力系数$\alpha$的理论值，把实验结果与此值比较求相对误差,并进行分析。}
+
+经查表得到在$25.3^\circ C$下其表面张力系数为$7.18 N/m$，计算相对误差：
+
+$$ \sigma = \frac{7.18-7.13}{7.13} = 0.7\% $$
+
+此误差不大，可以接受。误差可能来自吊环底面与水面不平行，同时也可能有来自拉断液膜时读数不及时造成的影响。
+
+\subsection{测量不同温度下表面张力系数，并与室温下水的表面张力系数理论值作分析比较。}
+
+计算过程与上述计算过程相同，省略计算过程。计算结果得到：
+
+$$ E = \sqrt{\frac{U_K^2}{\overline{K}^2} + \frac{U_{\overline{V^\ast}}^2}{\overline{V^\ast}^2} + \frac{U_{\overline{D_i}}^2 + U_{\overline{D_o}}^2}{\left(\overline{D_i}+\overline{D_o}\right)^2}} = 1.2\% $$
+$$ U = E \alpha = 0.000856 N/m $$
+$$ \alpha = (7.02 \pm 0.08) \times 10^{-2} N/m $$
+$$ P = 68.3 \% $$
+
+经查表得到在$30.9^\circ C$下其表面张力系数为$7.11 N/m$，计算相对误差：
+
+$$ \sigma = \frac{7.11-7.02}{7.02} = 1.3\% $$
+
+经计算得到$30.9^\circ C$下其表面张力系数比$25.3^\circ C$要小一些，这是因为温度升高，分子热运动加剧，液体分子之间的吸引力会减小，于是表面张力系数减小。
+
+\section{实验结论及现象分析}
+实验结果表明，测量值较理论值偏小，可能是因为拉出吊环后吊环上沾有少量水份，但是在实验误差允许范围内接受实验结果。
+
+测量仪器转换系数时，需要等到砝码盘稳定后再读数，否则由于加速度的影响会出现误差。主要的误差来自于吊环底面与水面不平行。判断是否平行，可以在降低水面的过程中观察水面是否在吊环外侧的同一纹理上。调整水位时不能太剧烈，否则水中产生明显的水波会干扰拉力计的施力。调整水位过快可能会导致拉断液面时测力计还未来得及探测到峰值，因此要缓慢调整液面高度。
+
+\section{讨论题}
+\subsection{在推导液体表面张力系数测量公式中作了哪些近似？式中各量的物理意义是什么？}
+
+\begin{itemize}
+    \item 将液膜边缘的切线方向近似为重力加速度方向（湿润角 $ \to 0 $）。
+    \item 认为拉起的液膜质量很小进而忽略这部分的重力（mg）计算。
+\end{itemize}
+
+$$\alpha = \frac{F-m_0g}{\pi (D_i+D_o)}$$
+
+本式中，$F$为拉起吊环的拉力，$m_0g$为吊环的重力。$D_i, D_o$为吊环的内、外径。
+
+\subsection{若考虑拉起液膜的重量，实验结果应如何修正？}
+考虑拉起液膜的重量，计算公式应改为：
+
+$$\alpha = \frac{F-(m+m_0)g}{\pi (D_i+D_o)}$$
+
+若能求出液膜的质量，则可以通过吊环的质量按比例折算到计算公式中对实验结果进行
+修正。 
+\end{document}

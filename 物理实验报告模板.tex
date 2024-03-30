@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{array}
+\xeCJKsetup{CJKmath=true} 
 \usepackage{zhnumber} % change section number to chinese
 \renewcommand\thesection{\zhnum{section}}
 \renewcommand \thesubsection {\arabic{subsection}}
@@ -15,8 +16,8 @@
     a4paper,
     left=3.18cm,
     right=3.18cm,
-    top=2.54cm,
-    bottom=2.54cm
+    top=3.04cm,
+    bottom=3.04cm
 }
 
 \pagestyle{fancy}
@@ -24,7 +25,7 @@
 \renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
 \fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
 \fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
-\fancyfoot[R]{\raisebox{1\baselineskip}{\thepage}} % 将页数放在右下角
+\fancyfoot[R]{\thepage} % 将页数放在右下角
 
 
 \setlength\headwidth{\textwidth}
@@ -44,7 +45,7 @@
 }\end{center}
 
 \begin{center}
-    \LARGE \textbf{实验内容 \underline{<实验内容>}}
+    \Large \textbf{实验内容 \underline{<实验内容>}}
 \end{center}
 
 \section{预习内容}

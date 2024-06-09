@@ -37,7 +37,7 @@
 
 ## 😄 友链
 
-- 来自 [@Zjl37](https://github.com/Zjl37) 的 [PHYS1006 Workspace](https://github.com/Zjl37/phys1006-workspace)
+- 来自 [@Zjl37](https://github.com/Zjl37) 基于 `typst` 排版工具的 [PHYS1006 Workspace](https://github.com/Zjl37/phys1006-workspace)
 
 ## 📄 license
 

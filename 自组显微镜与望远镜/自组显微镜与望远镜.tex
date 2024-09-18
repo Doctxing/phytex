@@ -1,0 +1,196 @@
+\documentclass{ctexart}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{array}
+\xeCJKsetup{CJKmath=true} 
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand \thesubsection {\arabic{subsection}}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\geometry{
+    a4paper,
+    left=3.18cm,
+    right=3.18cm,
+    top=3.04cm,
+    bottom=3.04cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
+\fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
+\fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
+\fancyfoot[R]{\thepage} % 将页数放在右下角
+
+
+\setlength\headwidth{\textwidth}
+
+\begin{document}
+
+\noindent
+\begin{center}
+\textbf{
+\begin{tabular}{p{2.4cm}p{2.4cm}p{4cm}p{4cm}}
+    班级 \hrulefill & 学号 \hrulefill & 姓名 \hrulefill & 教师签字 \hrulefill \\
+\end{tabular}
+\begin{tabular}{p{6cm}p{3.6cm}p{3.6cm}}
+    实验日期 \hrulefill & 预习成绩 \hrulefill & 总成绩 \hrulefill
+\end{tabular}
+{\noindent}	 \rule[-10pt]{\textwidth}{0.7pt}
+}\end{center}
+
+\begin{center}
+    \Large \textbf{实验内容 \underline{自组显微镜与望远镜}}
+\end{center}
+
+\section{预习内容}
+
+\subsection{请分别绘制出显微镜和望远镜（包括开普勒望远镜、伽利略望远镜）的光路图。}
+\subsection{在自组显微镜实验中，物镜和目镜的间距越大，组成的显微镜的放大率越大还是越小？请简述原因。}
+
+\newpage
+\section{数据记录}
+\subsection{自组显微镜放大率测量}
+
+\begin{table}[!h]
+    \renewcommand\arraystretch{1.2}
+    \centering
+    \caption{物镜$L_o \ (f_o' = 45 \ mm)$，目镜$L_c \ (f_c' = 34 \ mm)$}
+    \begin{tabular}{|m{0.8cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|}
+        \hline
+        \small{序号}& \small{物镜$L_o$位置$(mm)$} & \small{目镜$Le$位置$(mm)$} & \small{分划板$M1$位置$(mm)$} & \small{标尺$M2$位置$(mm)$} & \small{光学筒长$\Delta \ (mm)$} & \small{$M2$标尺中距离$d \ (mm)$} & \small{对应$M1$格数$a$} \\ 
+        \hline
+        1& & & & & & & \\
+        \hline
+        2& & & & & & & \\
+        \hline
+        3& & & & & & & \\
+        \hline
+        4& & & & & & & \\
+        \hline
+        5& & & & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{自组望远镜放大率测量\small{(与 2023313107 杨树天 同学合作完成)}}
+
+\begin{table}[!h]
+    \renewcommand\arraystretch{1.2}
+    \centering
+    \caption{物镜$L_o \ (f_o' = 225 \ mm)$，目镜$L_c \ (f_c' = \pm 45 \ mm)$}
+    \begin{tabular}{|m{0.8cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|m{1.5cm}<{\centering}|}
+        \hline
+        \multicolumn{6}{|c|}{开普勒望远镜}\\
+        \hline
+        \small{序号}& \small{物镜$L_o$位置$(mm)$} & \small{目镜$Le$位置$(mm)$} & \small{标尺距离物镜的距离$(mm)$} & \small{红色指针距离$d_1 \ (mm)$} & \small{直观标尺长度$d_2 \ (mm)$} \\ 
+        \hline
+        1& & & & & \\
+        \hline
+        2& & & & & \\
+        \hline
+        3& & & & & \\
+        \hline
+        \multicolumn{6}{|c|}{伽利略望远镜}\\
+        \hline
+        \small{序号}& \small{物镜$L_o$位置$(mm)$} & \small{目镜$Le$位置$(mm)$} & \small{标尺距离物镜的距离$(mm)$} & \small{红色指针距离$d_1 \ (mm)$} & \small{直观标尺长度$d_2 \ (mm)$} \\ 
+        \hline
+        1& & & & & \\
+        \hline
+        2& & & & & \\
+        \hline
+        3& & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=100pt] at (current page.south east) {
+        \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+        \setlength{\tabcolsep}{18pt}    
+    \begin{tabular}{|c|c|}
+        \hline
+        \LARGE  教师 & \LARGE  姓名 \\
+        \hline
+        \LARGE \kaishu 签字 &  \\
+        \hline
+        \end{tabular}
+    };
+\end{tikzpicture}
+
+\newpage
+\section{实验数据处理}
+\subsection{分别求出自组显微镜测量放大率和计算放大率。}
+
+显微镜的测量放大率为
+
+$$ M = -\frac{d \times 10}{a} $$
+
+显微镜的计算放大率为
+
+$$ \Gamma \approx -\frac{L\cdot \Delta}{f_1\cdot f_2} $$
+
+根据表格信息计算并列在下表中
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ c | c c c c c }
+      \hline
+      $M$  & -26.1 &-26.25 &-27.364 &-28.889 &-29.444 \\
+      \hline
+      $\Gamma $ & -26.307 &-26.814 &-27.876 &-29.183 &-30.719 \\
+      \hline
+    \end{tabular}
+\end{table}
+
+可以看到，测量放大率与计算放大率的值相近。
+
+\subsection{分别求出自组开普勒望远镜、伽利略望远镜实际测量放大率和无限远放大率。}
+
+望远镜的实际测量放大率绝对值为
+
+$$ M = \frac{d_2}{d_1} $$
+
+望远镜的无限远放大率绝对值为
+
+$$ \Gamma = \frac{f_1}{f_2} $$
+
+根据表格信息计算并列在下表中
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ c | c c c |c| c c c }
+      \hline
+      $ M_k $  & 6.0 & 5.2 & 6.1 & $ M_G $ & 4.0 & 4.5 & 5.0 \\
+      \hline
+      $\Gamma $ & \multicolumn{7}{c}{5} \\
+      \hline
+    \end{tabular}
+\end{table}
+
+可以看到，在考虑实际测量使用肉眼用力蹬出远处极小刻度数值的情况下，实际测量放大率与无限远放大率的值相差不算太大。
+
+\section{实验现象分析及结论}
+在自组显微镜实验中，通过调整物镜与目镜的距离，最终观察到的物体图像为倒立像。显微镜能够放大微观细节，但视野相对狭窄。随着对焦精确度的提升，物体细节逐渐清晰，但视野边缘会出现轻微的畸变。这是由于显微镜的两组凸透镜结构造成的像差所致。尽管如此，它的高倍放大效果适合对细小物体进行深入观察。同时，随着调高光学筒长，视野的亮度有略微降低。
+
+在自组开普勒式望远镜实验中，观测远处的标尺时，虽然图像为倒立像，但标尺的刻度放大后清晰可见，整体成像效果较好。开普勒式望远镜的凸透镜设计提供了较高的放大倍率，视野较广，且图像中心部分的清晰度较高。由于自组镜片的限制，图像的边缘可能出现轻微的色差，但畸变相对较少。
+
+伽利略式望远镜则提供了正立像，但视野相对较窄，且边缘畸变较为明显。在观测远处的标尺时，虽然成像明亮，但边缘部分可能出现显著的失真，刻度线的形状发生变形。这种畸变主要是由伽利略式望远镜的凹透镜目镜结构导致的。放大倍率较低使得它更适合对整体物体的初步观测，而不是精细的细节观察。
+
+\section{讨论题}
+
+\subsection{请简述显微镜与望远镜的区别？}
+
+显微镜和望远镜虽然都属于光学仪器，但其功能和设计目的有显著区别。显微镜主要用于观察微小物体，通过高倍放大展示物体的细节结构，通常物距较近。显微镜的物镜和目镜组合放大微观世界中的细节，使人能够观察到肉眼无法直接看清的微小物质。而望远镜则是为远距离观测而设计的，尤其适用于天文观测和地面远距离观察。它的光学系统通常包括一个大焦距的物镜，用于收集远处物体的光线，再通过目镜放大，使远处的物体看起来更近。望远镜需要较长的焦距来获取更大的视野和较高的放大倍数，因此通常观察的是宏观世界中的遥远物体。
+
+\subsection{请思考自组望远镜实际视放大率测量值与无限远放大率数值出现差异的原因？}
+
+在实际测量中，由于人眼对远处物体的观察需要用力蹬出远处极小刻度，因此在实际测量中，人眼的视力和观察角度会对测量结果产生一定的影响。同时，人眼的焦距是可以即时变化的，在长时间观察下，眼睛疲劳导致眼内晶状体形变而发生误差，此外，由于自组望远镜的镜片可能存在一定的畸变，如色差、像差等，也会对实际测量结果产生一定的影响。而无限远放大率则是在理想条件下的计算值，不考虑实际观察时的各种因素，因此与实际测量值会有一定的差异。
+
+\end{document}

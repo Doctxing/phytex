@@ -1,0 +1,162 @@
+\documentclass{ctexart}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{array}
+\xeCJKsetup{CJKmath=true} 
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand \thesubsection {\arabic{subsection}}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\geometry{
+    a4paper,
+    left=3.18cm,
+    right=3.18cm,
+    top=3.04cm,
+    bottom=3.04cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt} % 设置页眉横线粗细
+\fancyhead[L]{\kaishu\large 大学物理实验报告} % 在左侧设置页眉文字
+\fancyhead[R]{\kaishu\large 哈尔滨工业大学(深圳) } % 在右侧设置页眉文字
+\fancyfoot[R]{\thepage} % 将页数放在右下角
+
+
+\setlength\headwidth{\textwidth}
+
+\begin{document}
+
+\noindent
+\begin{center}
+\textbf{
+\begin{tabular}{p{2.4cm}p{2.4cm}p{4cm}p{4cm}}
+    班级 \hrulefill & 学号 \hrulefill & 姓名 \hrulefill & 教师签字 \hrulefill \\
+\end{tabular}
+\begin{tabular}{p{6cm}p{3.6cm}p{3.6cm}}
+    实验日期 \hrulefill & 预习成绩 \hrulefill & 总成绩 \hrulefill
+\end{tabular}
+{\noindent}	 \rule[-10pt]{\textwidth}{0.7pt}
+}\end{center}
+
+\begin{center}
+    \Large \textbf{实验内容 \underline{用惠斯通电桥测电阻}}
+\end{center}
+
+
+
+\section{实验目的}
+
+\vspace{6\baselineskip}
+
+\section{实验预习}
+
+绘制惠斯通电桥的电路图，并说明平衡时满足的条件。
+
+\newpage
+\section{数据记录}
+
+\subsection{惠斯通电桥测量电阻}
+
+\begin{table}[!h]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+    \begin{tabular}{|c|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|}
+        \hline
+        电阻值 & $N$ & $R_s (\varOmega)$ & $R_x (\varOmega)$ & $\Delta R_s (\varOmega)$ & $\Delta n$ & $S$ \\
+        \hline
+        1 $ k\varOmega $ & 1 & & & & & \\
+        \hline
+        100 $ \varOmega $ & 1 & & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{惠斯通电桥灵敏度测量(1 $ k\varOmega $)}
+
+\begin{table}[!h]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+    \begin{tabular}{|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|m{1.3cm}<{\centering}|}
+        \hline
+        $N$ & $R_s (\varOmega)$ & $R_x (\varOmega)$ & $\Delta R_s (\varOmega)$ & $\Delta n$ & $S$ \\
+        \hline
+        0.01 & & & & & \\
+        \hline
+        0.1 & & & & & \\
+        \hline
+        1 & & & & & \\
+        \hline
+        10 & & & & & \\
+        \hline
+        100 & & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,inner sep=100pt] at (current page.south east) {
+        \renewcommand{\arraystretch}{1.5} % 表格行高倍数
+        \setlength{\tabcolsep}{18pt}    
+    \begin{tabular}{|c|c|}
+        \hline
+        \LARGE  教师 & \LARGE  姓名 \\
+        \hline
+        \LARGE \kaishu 签字 &  \\
+        \hline
+        \end{tabular}
+    };
+\end{tikzpicture}
+
+\newpage
+
+\section{实验结论及现象分析}
+
+\textbf{qs:对比不同比值N下，惠斯通电桥灵敏度变化，并分析其他可能影响惠斯通电桥灵敏度参量}
+
+通过比较不同N值下的测量结果，发现电桥的灵敏度随着N值的变化而变化。大致而言，N值较接近1时，电桥的平衡条件容易实现，电流计的偏转最为明显，灵敏度较高。而当N值偏离1时，电桥的灵敏度逐渐降低，电流计的响应幅度减小，导致测量不如N值为1时敏感。
+
+此外，实验过程中分析了其他可能影响惠斯通电桥灵敏度的因素。首先是电阻的匹配度问题。当电桥臂电阻值相差较大时，即便通过调节N值，电桥的灵敏度也会受到一定影响。其次，电流计本身的内阻、接线电阻及环境温度等外界条件也会影响电桥的整体灵敏度。
+
+\section{讨论问题}
+
+\subsection{电桥测电阻为什么不能测量小于1 Ω的电阻？}
+
+主要体现在以下几个方面：
+
+\begin{enumerate}
+    \item \textbf{接触电阻和导线电阻的影响}：在测量非常小的电阻时，导线本身的电阻以及电桥各接点之间的接触电阻会显著影响测量结果。由于这些电阻通常与待测小电阻相当甚至更大，它们会导致误差增大，难以获得准确的测量结果。
+    \item \textbf{电流计灵敏度的限制}：惠斯通电桥的精度依赖于电流计的灵敏度。当电阻非常小时，电流通过电桥的两个分支会趋于相等，导致电流计上的电流变化幅度非常小。此时电流计可能无法检测到足够明显的偏差，进而无法精准确定电桥的平衡点，从而降低了测量精度。
+    \item \textbf{热效应的影响}：当测量小电阻时，流过电桥的电流较大，可能会导致导线和接触点的发热，从而使电阻值发生变化，影响测量结果。这种由热效应引起的误差在小电阻测量中尤为突出。
+    \item \textbf{仪器精度和分辨率限制}：惠斯通电桥的标准测量精度通常适用于几欧姆到几千欧姆的电阻，对于低于1Ω的小电阻，测量仪器的精度和分辨率不足以给出准确的结果，必须使用更专门的设备（如四线测量法或开尔文电桥）来代替惠斯通电桥。
+\end{enumerate}
+
+\subsection{用什么方法保护电流计，不至于因电流过大而损坏？}
+
+在实验中，我们采取了逐渐调高电流计灵敏度的方法，以保护电流计不至于因电流过大而损坏。具体而言，我们首先将电流计灵敏度调至最小，然后逐渐增大电流计灵敏度，直至电流计的偏转达到合适的范围。这样可以有效避免电流过大对电流计造成损坏。同时，实验采取了较小的电压和电流值，以减小电流计的负载，进一步保护电流计。
+
+\subsection{当电桥平衡后，若互换电源和检流计位置，电桥是否仍然平衡？并证明。}
+
+是的，互换电源和检流计的位置后，惠斯通电桥仍然可以保持平衡。通过分析电桥平衡的条件，我们可以证明这一点。
+
+设电桥的四个臂分别为$R_1, R_2, R_3, R_4$，电源电压为$V$，检流计的灵敏度为$S$，电桥平衡时，电流计的偏转为0，即：
+
+\begin{equation}
+    \frac{R_1}{R_2} = \frac{R_3}{R_4}
+\end{equation}
+
+当电源和检流计位置互换后，电桥的平衡条件变为：
+
+\begin{equation}
+    \frac{R_1}{R_3} = \frac{R_2}{R_4}
+\end{equation}
+
+由于电桥平衡时，有$R_1/R_2 = R_3/R_4$，因此有$R_1/R_3 = R_2/R_4$，即电桥在互换电源和检流计位置后仍然保持平衡。
+
+
+\end{document}
